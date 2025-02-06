@@ -19,7 +19,7 @@ LOCAL_C_INCLUDES += $(LOCAL_PATH)/../include
 
 LOCAL_SRC_FILES:= \
 	libion.cpp
-
+LOCAL_SHARED_LIBRARIES := libcutils liblog libutils
 LOCAL_MODULE := libion_exynos
 LOCAL_VENDOR_MODULE := true
 

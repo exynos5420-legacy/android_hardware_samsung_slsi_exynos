@@ -73,7 +73,8 @@ ifeq ($(BOARD_USE_DEINTERLACING_SUPPORT), true)
 LOCAL_CFLAGS += -DUSE_DEINTERLACING_SUPPORT
 endif
 
-LOCAL_SHARED_LIBRARIES = libion
+LOCAL_SHARED_LIBRARIES = libion libcutils liblog libutils
+
 
 LOCAL_MODULE := libExynosVideoApi
 LOCAL_VENDOR_MODULE := true
