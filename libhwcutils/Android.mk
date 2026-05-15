@@ -49,6 +49,10 @@ LOCAL_C_INCLUDES := \
 	$(TOP)/hardware/samsung_slsi/$(TARGET_SOC)/libhwcutilsmodule \
 	$(TOP)/hardware/samsung_slsi/exynos/libmpp
 
+ifneq ($(TARGET_SPECIFIC_HEADER_PATH),)
+LOCAL_C_INCLUDES += $(addprefix $(TOP)/, $(TARGET_SPECIFIC_HEADER_PATH))
+endif
+
 ifeq ($(BOARD_USES_VPP), true)
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/../libvppdisplay
 else
