@@ -34,6 +34,10 @@ LOCAL_C_INCLUDES := \
 	$(TOP)/hardware/samsung_slsi/exynos/include \
 	$(TOP)/hardware/samsung_slsi/exynos5/include
 
+ifneq ($(TARGET_SPECIFIC_HEADER_PATH),)
+LOCAL_C_INCLUDES += $(addprefix $(TOP)/, $(TARGET_SPECIFIC_HEADER_PATH))
+endif
+
 LOCAL_SRC_FILES := 	\
 	format_chooser.cpp \
 	gralloc.cpp 	\
